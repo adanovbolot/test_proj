@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html><br>
+<html>
+    <head>
+        <title>{% block title %}добро пожаловать в понел учителя{% endblock %}</title>
+        <link href="{% static 'admin/css/base.css' %}" rel="stylesheet">
+        <link href="{% static 'admin/css/dark_mode.css' %}" rel="stylesheet">
+    <style>
+   body {
+    margin-right: 25%; /* Отступ справа */
+    margin-left: 25%; /* Отступ слева */
+   }
+  </style>
+    </head>
+
+<body>
+<br><br><br><br><br><br>    <br><br><br><br><br><br><br><br><br><br><br><br>{% block content %}{% endblock %}
+</body>
+</html>

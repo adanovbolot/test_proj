@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<center>
+
+<h1>Выберите форму регистрации на сайте</h1>
+<ul class="menu">
+    <h3><li><a href="{% url 'buyer_add' %}">Покупатель</a></li></h3>
+            </ul>
+<ul class="menu">
+             <h3><li><a href="{% url 'provider_add' %}">Поставщик</a></li><h3/>
+            </ul>
+
+</center>
+{% endblock %}

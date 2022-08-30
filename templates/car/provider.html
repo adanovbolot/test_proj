@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Регистрация</h1>
+<form method="post">
+<div class="fieldWrapper">
+                {% csrf_token %}
+    <label><br>Email: {{ form.email }}</label>
+</div>
+    <h2>Название организации</h2>
+<div>
+    <label><br>ИП или Юр.лицо :{{ form.user_type }}</label>
+</div>
+<div>
+    <label><br>ИИН :{{ form.inn }}</label>
+</div>
+<h2>Фактический адрес</h2>
+<div>
+    <label><br>Ваш город :{{ form.city }}</label>
+</div>
+<div>
+    <label><br>Улица :{{ form.the_outside }}</label> <label>Дом/стр. :{{ form.home_residential }}</label> <label>Офис: {{ form.office }}</label>
+</div>
+<div>
+    <label><br>Номер телефона:{{ form.phone_code }}{{ form.phone_number }}</label>
+</div>
+<div>
+    <label><br>Сайт Вашей компании:{{ form.site }}</label>
+</div>
+<h2>Виды деятельности</h2>
+<div>
+    <label><br>Магазин:{{ form.score }}</label>
+</div>
+<div>
+    <label><br>Региональная сеть магазина:{{ form.regional_chain_store }}</label>
+</div>
+<div>
+    <label><br>Федеральная сеть магазина:{{ form.federal_store_chain }}</label>
+</div>
+<div>
+    <label><br>Интернет-магазин:{{ form.online_store }}</label>
+</div>
+<div>
+    <label><br>Автосервис:{{ form.car_service }}</label>
+</div>
+<div>
+    <label><br>Прочее:{{ form.other }}</label>
+</div>
+    <br><input type="submit" value="отправить заявку">
+</form>
+{% endblock %}
